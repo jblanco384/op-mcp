@@ -105,6 +105,168 @@
       "type_based_query_filters": {
         "_comment": "USED BY: Type-based query_usecase tool ONLY. No specific filters configured"
       }
+    },
+    {
+      "type_id": "Vendor",
+      "tool_prefix": "vendor",
+      "display_name": "Vendor",
+      "path_prefix": "Vendors",
+      "namespace": "openpages",
+      "tool_descriptions": {
+        "upsert": "Create or update a vendor in OpenPages. Automatically determines whether to insert a new vendor or update an existing one based on provided identifiers (id, path, or name).",
+        "query": "Search and retrieve vendors from OpenPages. Supports filtering by name, owner, status, and custom field filters. Returns vendor details including ID, name, description, and selected fields."
+      },
+      "resource_fields": {
+        "include_all_fields": true,
+        "fields": [
+          "@OPSS-Vnd"
+        ],
+        "_comment": "USED BY: Published resources (all modes) + Type-based upsert_vendor tool. Using '@OPSS-Vnd' includes all fields from the OPSS-Vnd field group"
+      },
+      "type_based_query_filters": {
+        "fields": [
+          "OPSS-Vnd:Status",
+          "OPSS-Vnd:Vendor Type",
+          "OPSS-Vnd:Risk Rating",
+          "OPSS-Vnd:Owner"
+        ],
+        "_comment": "USED BY: Type-based query_vendors tool ONLY"
+      }
+    },
+    {
+      "type_id": "Policy",
+      "tool_prefix": "policy",
+      "display_name": "Policy",
+      "path_prefix": "Policies",
+      "namespace": "openpages",
+      "tool_descriptions": {
+        "upsert": "Create or update a policy in OpenPages. Automatically determines whether to insert a new policy or update an existing one based on provided identifiers (id, path, or name).",
+        "query": "Search and retrieve policies from OpenPages. Supports filtering by name, owner, status, and custom field filters. Returns policy details including ID, name, description, and selected fields."
+      },
+      "resource_fields": {
+        "include_all_fields": true,
+        "fields": [
+          "@OPSS-Pol"
+        ],
+        "_comment": "USED BY: Published resources (all modes) + Type-based upsert_policy tool. Using '@OPSS-Pol' includes all fields from the OPSS-Pol field group"
+      },
+      "type_based_query_filters": {
+        "fields": [
+          "OPSS-Pol:Status",
+          "OPSS-Pol:Policy Type",
+          "OPSS-Pol:Review Date",
+          "OPSS-Pol:Owner"
+        ],
+        "_comment": "USED BY: Type-based query_policies tool ONLY"
+      }
+    },
+    {
+      "type_id": "Resource",
+      "tool_prefix": "asset",
+      "display_name": "Asset",
+      "path_prefix": "Resources",
+      "namespace": "openpages",
+      "tool_descriptions": {
+        "upsert": "Create or update an asset (Resource) in OpenPages. Automatically determines whether to insert a new asset or update an existing one based on provided identifiers (id, path, or name).",
+        "query": "Search and retrieve assets (Resources) from OpenPages. Supports filtering by name, owner, status, and custom field filters. Returns asset details including ID, name, description, and selected fields."
+      },
+      "resource_fields": {
+        "include_all_fields": true,
+        "fields": [
+          "@OPSS-Res"
+        ],
+        "_comment": "USED BY: Published resources (all modes) + Type-based upsert_asset tool. Note: Object type is 'Resource' but display name is 'Asset'. Using '@OPSS-Res' includes all fields from the OPSS-Res field group"
+      },
+      "type_based_query_filters": {
+        "fields": [
+          "OPSS-Res:Status",
+          "OPSS-Res:Resource Type",
+          "OPSS-Res:Criticality",
+          "OPSS-Res:Owner"
+        ],
+        "_comment": "USED BY: Type-based query_assets tool ONLY"
+      }
+    },
+    {
+      "type_id": "RiskAssessment",
+      "tool_prefix": "riskassessment",
+      "display_name": "Risk Assessment",
+      "path_prefix": "Risk Assessments",
+      "namespace": "openpages",
+      "tool_descriptions": {
+        "upsert": "Create or update a risk assessment in OpenPages. Automatically determines whether to insert a new risk assessment or update an existing one based on provided identifiers (id, path, or name).",
+        "query": "Search and retrieve risk assessments from OpenPages. Supports filtering by name, owner, status, and custom field filters. Returns risk assessment details including ID, name, description, and selected fields."
+      },
+      "resource_fields": {
+        "include_all_fields": true,
+        "fields": [
+          "@OPSS-RskAss"
+        ],
+        "_comment": "USED BY: Published resources (all modes) + Type-based upsert_riskassessment tool. Using '@OPSS-RskAss' includes all fields from the OPSS-RskAss field group"
+      },
+      "type_based_query_filters": {
+        "fields": [
+          "OPSS-RskAss:Status",
+          "OPSS-RskAss:Assessment Type",
+          "OPSS-RskAss:Overall Risk Rating",
+          "OPSS-RskAss:Owner"
+        ],
+        "_comment": "USED BY: Type-based query_riskassessments tool ONLY"
+      }
+    },
+    {
+      "type_id": "RegChange",
+      "tool_prefix": "regchange",
+      "display_name": "Regulatory Change",
+      "path_prefix": "Regulatory Changes",
+      "namespace": "openpages",
+      "tool_descriptions": {
+        "upsert": "Create or update a regulatory change in OpenPages. Automatically determines whether to insert a new regulatory change or update an existing one based on provided identifiers (id, path, or name).",
+        "query": "Search and retrieve regulatory changes from OpenPages. Supports filtering by name, owner, status, and custom field filters. Returns regulatory change details including ID, name, description, and selected fields."
+      },
+      "resource_fields": {
+        "include_all_fields": true,
+        "fields": [
+          "@OPSS-RegChg"
+        ],
+        "_comment": "USED BY: Published resources (all modes) + Type-based upsert_regchange tool. Using '@OPSS-RegChg' includes all fields from the OPSS-RegChg field group"
+      },
+      "type_based_query_filters": {
+        "fields": [
+          "OPSS-RegChg:Status",
+          "OPSS-RegChg:Change Type",
+          "OPSS-RegChg:Effective Date",
+          "OPSS-RegChg:Owner"
+        ],
+        "_comment": "USED BY: Type-based query_regchanges tool ONLY"
+      }
+    },
+    {
+      "type_id": "Requirement",
+      "tool_prefix": "requirement",
+      "display_name": "Requirement",
+      "path_prefix": "Requirements",
+      "namespace": "openpages",
+      "tool_descriptions": {
+        "upsert": "Create or update a requirement in OpenPages. Automatically determines whether to insert a new requirement or update an existing one based on provided identifiers (id, path, or name).",
+        "query": "Search and retrieve requirements from OpenPages. Supports filtering by name, owner, status, and custom field filters. Returns requirement details including ID, name, description, and selected fields."
+      },
+      "resource_fields": {
+        "include_all_fields": true,
+        "fields": [
+          "@OPSS-Req"
+        ],
+        "_comment": "USED BY: Published resources (all modes) + Type-based upsert_requirement tool. Using '@OPSS-Req' includes all fields from the OPSS-Req field group"
+      },
+      "type_based_query_filters": {
+        "fields": [
+          "OPSS-Req:Status",
+          "OPSS-Req:Requirement Type",
+          "OPSS-Req:Compliance Status",
+          "OPSS-Req:Owner"
+        ],
+        "_comment": "USED BY: Type-based query_requirements tool ONLY"
+      }
     }
   ]
 }
