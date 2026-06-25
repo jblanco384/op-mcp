@@ -119,16 +119,16 @@
       "resource_fields": {
         "include_all_fields": true,
         "fields": [
-          "@OPSS-Vnd"
+          "@OPSS-VRM"
         ],
-        "_comment": "USED BY: Published resources (all modes) + Type-based upsert_vendor tool. Using '@OPSS-Vnd' includes all fields from the OPSS-Vnd field group"
+        "_comment": "USED BY: Published resources (all modes) + Type-based upsert_vendor tool. Using '@OPSS-VRM' includes all fields from the OPSS-Vnd field group"
       },
       "type_based_query_filters": {
         "fields": [
-          "OPSS-Vnd:Status",
-          "OPSS-Vnd:Vendor Type",
-          "OPSS-Vnd:Risk Rating",
-          "OPSS-Vnd:Owner"
+          "OPSS-VRM:Vendor Status",
+          "OPSS-VRM:Strategic Vendor",
+          "OPSS-VRM:Risk Rating",
+          "OPSS-VRM:Vendor Owner"
         ],
         "_comment": "USED BY: Type-based query_vendors tool ONLY"
       }
@@ -141,7 +141,7 @@
       "namespace": "openpages",
       "tool_descriptions": {
         "upsert": "Create or update a policy in OpenPages. Automatically determines whether to insert a new policy or update an existing one based on provided identifiers (id, path, or name).",
-        "query": "Search and retrieve policies from OpenPages. Supports filtering by name, owner, status, and custom field filters. Returns policy details including ID, name, description, and selected fields."
+        "query": "Search and retrieve policies from OpenPages. Supports filtering by name, author, status, and custom field filters. Returns policy details including ID, name, description, and selected fields."
       },
       "resource_fields": {
         "include_all_fields": true,
@@ -153,9 +153,9 @@
       "type_based_query_filters": {
         "fields": [
           "OPSS-Pol:Status",
-          "OPSS-Pol:Policy Type",
-          "OPSS-Pol:Review Date",
-          "OPSS-Pol:Owner"
+          "OPSS-Pol:Type",
+          "OPSS-Pol:Version Date",
+          "OPSS-Pol:Author"
         ],
         "_comment": "USED BY: Type-based query_policies tool ONLY"
       }
@@ -168,7 +168,7 @@
       "namespace": "openpages",
       "tool_descriptions": {
         "upsert": "Create or update an asset (Resource) in OpenPages. Automatically determines whether to insert a new asset or update an existing one based on provided identifiers (id, path, or name).",
-        "query": "Search and retrieve assets (Resources) from OpenPages. Supports filtering by name, owner, status, and custom field filters. Returns asset details including ID, name, description, and selected fields."
+        "query": "Search and retrieve assets (Resources) from OpenPages. Supports filtering by name, administrator, risk core, and custom field filters. Returns asset details including ID, name, description, and selected fields."
       },
       "resource_fields": {
         "include_all_fields": true,
@@ -179,10 +179,10 @@
       },
       "type_based_query_filters": {
         "fields": [
-          "OPSS-Res:Status",
+          "OPSS-Res:Risk Score",
           "OPSS-Res:Resource Type",
-          "OPSS-Res:Criticality",
-          "OPSS-Res:Owner"
+          "OPSS-CIA:Criticality",
+          "OPSS-Res:Administrator"
         ],
         "_comment": "USED BY: Type-based query_assets tool ONLY"
       }
@@ -195,21 +195,21 @@
       "namespace": "openpages",
       "tool_descriptions": {
         "upsert": "Create or update a risk assessment in OpenPages. Automatically determines whether to insert a new risk assessment or update an existing one based on provided identifiers (id, path, or name).",
-        "query": "Search and retrieve risk assessments from OpenPages. Supports filtering by name, owner, status, and custom field filters. Returns risk assessment details including ID, name, description, and selected fields."
+        "query": "Search and retrieve risk assessments from OpenPages. Supports filtering by name, assessor, status, and custom field filters. Returns risk assessment details including ID, name, description, and selected fields."
       },
       "resource_fields": {
         "include_all_fields": true,
         "fields": [
-          "@OPSS-RskAss"
+          "@OPSS-RA"
         ],
-        "_comment": "USED BY: Published resources (all modes) + Type-based upsert_riskassessment tool. Using '@OPSS-RskAss' includes all fields from the OPSS-RskAss field group"
+        "_comment": "USED BY: Published resources (all modes) + Type-based upsert_riskassessment tool. Using '@OPSS-RA' includes all fields from the OPSS-RskAss field group"
       },
       "type_based_query_filters": {
         "fields": [
-          "OPSS-RskAss:Status",
-          "OPSS-RskAss:Assessment Type",
-          "OPSS-RskAss:Overall Risk Rating",
-          "OPSS-RskAss:Owner"
+          "OPSS-RA:Status",
+          "OPSS-RA:Domain",
+          "OPSS-RA:Frequency",
+          "OPSS-RA:Assessor"
         ],
         "_comment": "USED BY: Type-based query_riskassessments tool ONLY"
       }
@@ -227,16 +227,16 @@
       "resource_fields": {
         "include_all_fields": true,
         "fields": [
-          "@OPSS-RegChg"
+          "@OPSS-RegChange"
         ],
-        "_comment": "USED BY: Published resources (all modes) + Type-based upsert_regchange tool. Using '@OPSS-RegChg' includes all fields from the OPSS-RegChg field group"
+        "_comment": "USED BY: Published resources (all modes) + Type-based upsert_regchange tool. Using '@OPSS-RegChange' includes all fields from the OPSS-RegChg field group"
       },
       "type_based_query_filters": {
         "fields": [
-          "OPSS-RegChg:Status",
-          "OPSS-RegChg:Change Type",
-          "OPSS-RegChg:Effective Date",
-          "OPSS-RegChg:Owner"
+          "OPSS-RegChange:Status",
+          "OPSS-RegChange:Type",
+          "OPSS-RegChange:Impact",
+          "OPSS-RegChange:Owner"
         ],
         "_comment": "USED BY: Type-based query_regchanges tool ONLY"
       }
@@ -254,16 +254,16 @@
       "resource_fields": {
         "include_all_fields": true,
         "fields": [
-          "@OPSS-Req"
+          "@RCM-Req"
         ],
-        "_comment": "USED BY: Published resources (all modes) + Type-based upsert_requirement tool. Using '@OPSS-Req' includes all fields from the OPSS-Req field group"
+        "_comment": "USED BY: Published resources (all modes) + Type-based upsert_requirement tool. Using '@RCM-Req' includes all fields from the OPSS-Req field group"
       },
       "type_based_query_filters": {
         "fields": [
-          "OPSS-Req:Status",
-          "OPSS-Req:Requirement Type",
-          "OPSS-Req:Compliance Status",
-          "OPSS-Req:Owner"
+          "RCM-Req:Status",
+          "RCM-Req:Compliance Date",
+          "RCM-Req:Overall Requirement Score",
+          "RCM-Req:Owner"
         ],
         "_comment": "USED BY: Type-based query_requirements tool ONLY"
       }
